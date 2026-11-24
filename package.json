@@ -1,0 +1,33 @@
+{
+  "name": "opencode-mapa-conversacion",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Mapa de preguntas con navegación y vista previa de respuestas para OpenCode TUI.",
+  "exports": {
+    "./tui": "./dist/tui.js"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test:tui": "npm exec --yes --package=bun -- bun --conditions=browser tests/tui.smoke.mjs",
+    "check": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts"
+  },
+  "devDependencies": {
+    "@babel/core": "7.28.0",
+    "@babel/preset-typescript": "7.27.1",
+    "@opencode-ai/plugin": "1.18.35",
+    "@opentui/core": "0.4.5",
+    "@opentui/keymap": "0.4.5",
+    "@opentui/solid": "0.4.5",
+    "@types/node": "^22.0.0",
+    "babel-preset-solid": "1.9.12",
+    "esbuild": "0.28.2",
+    "solid-js": "1.9.12",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "string-width": "^7.2.0"
+  }
+}
